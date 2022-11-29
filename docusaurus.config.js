@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en']
   },
 
   presets: [
@@ -37,92 +37,94 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/SovereignCloudStack/Docs/tree/main/',
+                        'https://github.com/SovereignCloudStack/Docs/tree/main/'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      })
+    ]
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: '',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Docs',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/SovereignCloudStack/Docs',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
+        /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        ({
+          navbar: {
+            title: '',
+            logo: {
+              alt: 'My Site Logo',
+              src: 'img/logo.svg'
+            },
             items: [
               {
-                label: 'Contribute',
-                to: '/docs/intro',
+                type: 'doc',
+                docId: 'intro',
+                position: 'left',
+                label: 'Docs'
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
+              { to: '/blog', label: 'Blog', position: 'left' },
               {
-                label: 'Matrix',
-                href: 'https://matrix.to/#/!TiDqlLmEUaXqTemaLc:matrix.org?via=matrix.org',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/scs_osballiance',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
                 href: 'https://github.com/SovereignCloudStack/Docs',
-              },
-            ],
+                label: 'GitHub',
+                position: 'right'
+              }
+            ]
           },
-        ],
-        copyright: `Sovereign Cloud Stack, SCS and the logo are registered trademarks of the Open Source Business Alliance e.V. — Other trademarks are property of their respective owners.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
-};
+          footer: {
+            style: 'dark',
+            links: [
+              {
+                title: 'Docs',
+                items: [
+                  {
+                    label: 'Contribute',
+                    to: '/docs/intro'
+                  }
+                ]
+              },
+              {
+                title: 'Community',
+                items: [
+                  {
+                    label: 'Matrix',
+                    href: 'https://matrix.to/#/!TiDqlLmEUaXqTemaLc:matrix.org?via=matrix.org'
+                  },
+                  {
+                    label: 'Twitter',
+                    href: 'https://twitter.com/scs_osballiance'
+                  }
+                ]
+              },
+              {
+                title: 'More',
+                items: [
+                  {
+                    label: 'Blog',
+                    to: '/blog'
+                  },
+                  {
+                    label: 'GitHub',
+                    href: 'https://github.com/SovereignCloudStack/Docs'
+                  }
+                ]
+              }
+            ],
+            copyright:
+                    'Sovereign Cloud Stack, SCS and the logo are registered trademarks of the Open Source Business Alliance e.V. — Other trademarks are property of their respective owners.'
+          },
+          prism: {
+            theme: lightCodeTheme,
+            darkTheme: darkCodeTheme,
+            additionalLanguages: ['powershell', 'ruby']
+          }
+        })
+}
 
-module.exports = config;
+module.exports = config
