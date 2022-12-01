@@ -49,9 +49,6 @@ jobs:
         run: |
           rm -rf $(pwd)/repo_to_be_edited/.git
 
-      - name: debug
-        run: ls -la repo_to_be_edited
-
       - name: remove README.md files from A
         run: |
           find $(pwd)/repo_to_be_edited -name "README.md" | xargs rm -f
