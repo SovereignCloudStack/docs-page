@@ -31,10 +31,8 @@ jobs:
       matrix: 
         repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
-      - name: set repos
-        run: |
-          echo ${{matrix.repos.name}}
-          printf $(pwd)
+      - name: checkout the docusaurus repo (B)
+        uses: actions/checkout@v3
   
       - name: clone repo A which is about to be synchronized
         uses: sudosubin/git-clone-action@v1.0.1
