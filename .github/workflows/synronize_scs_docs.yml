@@ -31,9 +31,6 @@ jobs:
       matrix: 
         repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
-      - name: checkout the docusaurus repo (B)
-        uses: actions/checkout@v3
-
       - name: set repos
         run: |
           echo ${{matrix.repos.name}}
@@ -56,7 +53,6 @@ jobs:
       - name: create docusaurus subdirectory
         run: |
           mkdir $(pwd)/docs/${{matrix.repos.name}} || true
-          printf $(pwd)
 
       - name: copy docs content from A to B
         run: |
