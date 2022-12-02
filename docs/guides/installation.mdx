@@ -23,38 +23,29 @@ You must have macOS desktop access with administrator privileges.
 
 Login to the macOS desktop system and [install Homebrew](https://brew.sh/) on your system (if not already installed).
 
-Install command:
+Install nvm via homebrew:
 
 ```
 brew install nvm
 ```
 
-If you have no other projects, where you need a different version, it is recommended to install the latest stable LTS version of node.
-
-```console
-nvm install lts
-nvm use lts
-```
-
   </TabItem>
   <TabItem value="linux" label="Linux">
 
-See [this](https://github.com/nvm-sh/nvm#installing-and-updating) installation guide on GitHub by nvm-sh for installing nvm.
-
-```console
-nvm install lts
-nvm use lts
-```
-
-If your terminal shows the lts version number then everything is set up correctly and you can continue.
+See [this](https://github.com/nvm-sh/nvm#installing-and-updating) installation guide on GitHub by nvm-sh for installing nvm. 
 
   </TabItem>
   <TabItem value="win" label="Windows">
 
 [NVM for Windows](https://github.com/coreybutler/nvm-windows)
-runs in an Admin shell. You'll need to start powershell or Command Prompt as Administrator to use nvm-windows. Install it with an Installer provided by nvm-sh on their [release page](https://github.com/coreybutler/nvm-windows/releases). You can check the available versions with
+runs in an Admin shell. You'll need to start powershell or Command Prompt as Administrator to use nvm-windows. Install NVM for Windows with an Installer provided by nvm-sh on their [release page](https://github.com/coreybutler/nvm-windows/releases). 
 
-```console
+  </TabItem>
+</Tabs>
+
+Once installed you can check the available versions with 
+
+```
 nvm list
 ```
 
@@ -62,11 +53,7 @@ If you have no other projects, where you need a different version, it is recomme
 
 ```console
 nvm install lts
-nvm use lts
 ```
-
-  </TabItem>
-</Tabs>
 
 nvm has now installed the latest node.js version with its package manager npm. Check if the installation has been successfull by checking it:
 
