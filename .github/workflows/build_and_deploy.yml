@@ -17,12 +17,25 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install dependencies, build and commit to gh-pages branch
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies and build page
         run: |
           npm ci
           npm run build
-          git config user.name scs-build-bot
-          git config user.email bot@scs.com
-          git --work-tree build add --all
-          git commit -m "Automatic Deploy action run by github-actions"
-          git push origin HEAD:gh-pages --force
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./build  
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Update SCS Docs Page'
