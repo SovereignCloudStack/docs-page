@@ -1,0 +1,28 @@
+name: Build and Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies, build and commit to gh-pages branch
+        run: |
+          npm ci
+          npm run build
+          git config user.name scs-build-bot
+          git config user.email bot@scs.com
+          git --work-tree build add --all
+          git commit -m "Automatic Deploy action run by github-actions"
+          git push origin HEAD:gh-pages --force
