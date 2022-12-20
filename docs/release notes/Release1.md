@@ -1,4 +1,5 @@
 # Release Notes for SCS Release 1
+
 (Release Date: 2021-09-29)
 
 ## Scope
@@ -9,7 +10,6 @@ latest versions of upstream software (OpenStack Wallaby, Kubernetes-1.21.5),
 support for Bare Metal service, progress on user federation for clouds, and
 progress on the integration of the container layer with k8s Cluster API (now in
 version 0.4.x).
-
 
 ## CI framework
 
@@ -23,7 +23,7 @@ and costs. Reasons for using Zuul-CI include the close connection to the
 OpenStack project and the enormous flexibility in comparison to other similar
 tools. On top of that you have also gating instead of only CI. A quick example
 for a Zuul-CI operated repository can be found here:
-https://github.com/SovereignCloudStack/zuul-sandbox.
+<https://github.com/SovereignCloudStack/zuul-sandbox>.
 
 ## Metrics collection and dashboards
 
@@ -96,7 +96,6 @@ https://github.com/osism/testbed/blob/8430afdd36307acc1bf5ebd930ecbd3dd4b1dd22/d
 with some Keycloak settings that can be relevant for alleviating the issue,
 but in Release 1 there is no solution for this yet.
 
-
 ## Bare Metal Service
 
 The ironic Bare Metal service can be deployed with the SCS (OSISM)
@@ -106,7 +105,7 @@ setup just as nicely as the other components. While most pieces
 are ready, the final integration steps are still work-in-progress
 and will happen after R1.
 
-## Container Layer 
+## Container Layer
 
 ### Overview and Goals for R1
 
@@ -146,9 +145,9 @@ using k8s capi to bootstrap clusters on SCS clouds for Gardener management.
 As of this writing, the list of SCS defined standards still comprises
 two standards:
 
-* [SCS Flavor naming and standard flavors standard](Design-Docs/flavor-naming.md)
+* [SCS Flavor naming and standard flavors standard](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/flavor-naming.md)
 
-* [SCS Image naming and metadata standard](Design-Docs/Image-Properties-Spec.md)
+* [SCS Image naming and metadata standard](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Image-Properties-Spec.md)
 
 As before, we continue to rely on OpenStack and CNCF defined standards
 in addition to this -- the k8s clusters need to pass the conformance
@@ -189,7 +188,7 @@ incorporated and whose release notes we want to link here for convenience:
 
 ## Release tagging
 
-See [Release Numbering scheme](../Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
 We have added the tag `v2.0.0` to the relevant repositories to designate the `SCS_RELEASE_R1`.
 
 ## List of known issues & restrictions in R1
@@ -198,5 +197,3 @@ We have added the tag `v2.0.0` to the relevant repositories to designate the `SC
 
 * OIDC Login is meant to be used with TLS, on
 [non-TLS setups it only works with restrictions](#non-TLS-restrictions-testbed).
-
-

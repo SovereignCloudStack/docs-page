@@ -1,4 +1,5 @@
 # Release Notes for SCS Release 3
+
 (Release Date: 2022-09-21)
 
 ## Scope
@@ -171,7 +172,7 @@ has been added.
 
 ## Release Tagging
 
-See [Release Numbering scheme](../Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
 We have added the tag `v4.0.0` to the relevant repositories to designate the `SCS_RELEASE_R3`.
 
 Note that we will release R4 (v5.0.0) in March 2023 and stop providing maintenance

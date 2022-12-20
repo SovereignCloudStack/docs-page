@@ -1,4 +1,5 @@
 # Release Notes for SCS Release 0
+
 (Release Date: 2021-07-15)
 
 ## Scope
@@ -36,7 +37,7 @@ a complete list. The exact versions of the contained components can be retrieved
 
 ## Get SCS
 
-See [main README](../README.md).
+See [main README](/docs/intro.md).
 
 ## Known Bugs
 
@@ -61,7 +62,7 @@ a Release as production-ready software in one of the next releases. We certainly
 hope to do so.
 
 To test how our k8s aaS platform will look like, have a look at
-https://github.com/SovereignCloudStack/k8s-cluster-api-provider
+<https://github.com/SovereignCloudStack/k8s-cluster-api-provider>
 You can follow the documentation to set up the k8s cluster API on an SCS
 cloud (or other well configured OpenStack clouds that support octavia).
 
@@ -72,15 +73,15 @@ the next releases.
 
 ## Release tagging
 
-See [Release Numbering scheme](../Design-Docs/Release-Numbering-Scheme.md).
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Release-Numbering-Scheme.md).
 The containers have version number v1.0.0 for R0.
 
 ## Updates
 
 Updating the software can conveniently be done from the manager node by running the
-ansible playbooks again. Details are in the 
+ansible playbooks again. Details are in the
 [OSISM testbed documentation](https://docs.osism.tech/testbed/usage.html#update-services).
 
 ## Bug reporting
 
-See [main README](../README.md) file.
+See [main README](/docs/intro.md) file.
