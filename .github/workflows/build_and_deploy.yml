@@ -7,7 +7,7 @@ on:
 
 jobs:
   synchronize-scs-docs:
-    uses: ./github/workflows/synchronize_scs_docs.yml
+    uses: ./.github/workflows/synchronize_scs_docs.yml@latest
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
