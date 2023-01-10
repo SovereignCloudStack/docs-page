@@ -1,13 +1,8 @@
 ---
 name: Synchronize SCS Docs
 
-"on":
-  push:
-    paths:
-    # only trigger the workflow when docs.json has been changed
-      - 'docs.json'
-    branches:
-      - main
+on:
+  workflow_call:
 
 jobs:
   provide_repos_json:
