@@ -9,6 +9,7 @@ jobs:
   synchronize-scs-docs:
     uses: ./.github/workflows/synchronize_scs_docs.yml@latest
   build_and_deploy:
+    needs: synchronize-scs-docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
