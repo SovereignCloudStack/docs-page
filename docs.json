@@ -2,6 +2,6 @@
     {
         "name": "openstack-image-manager",
         "org": "osism",
-        "directory": "doc"
+        "directory": "doc/source"
     }
 ]
