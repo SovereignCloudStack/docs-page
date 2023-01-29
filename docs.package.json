@@ -14,7 +14,7 @@
     {
         "name": "standards",
         "org": "SovereignCloudStack",
-        "directory": "standards",
+        "directory": "Standards",
         "target": "docs"
     },
     {
