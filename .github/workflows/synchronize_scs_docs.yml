@@ -23,8 +23,8 @@ jobs:
     needs: provide_repos_json
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1
       matrix: 
-        max-parallel: 1
         repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
       - name: checkout the docusaurus repo (B)
