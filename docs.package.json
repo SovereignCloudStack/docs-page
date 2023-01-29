@@ -2,13 +2,13 @@
     {
         "name": "docs",
         "org": "SovereignCloudStack",
-        "directory": "docs/operations",
+        "directory": "operations",
         "target": "docs"
     },
     {
         "name": "release-notes",
         "org": "SovereignCloudStack",
-        "directory": "release-notes",
+        "directory": "/",
         "target": "docs"
     },
     {
