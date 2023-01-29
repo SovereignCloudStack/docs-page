@@ -14,13 +14,13 @@
     {
         "name": "standards",
         "org": "SovereignCloudStack",
-        "directory": "standards/standards",
+        "directory": "standards",
         "target": "docs"
     },
     {
         "name": "docs",
         "org": "SovereignCloudStack",
-        "directory": "docs/community",
+        "directory": "community",
         "target": "community"
     }
 ]
