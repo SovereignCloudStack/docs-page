@@ -1,9 +1,9 @@
 [
     {
         "repo": "SovereignCloudStack/docs",
-        "source": "community",
+        "source": "community/contribute",
         "target": "community",
-        "label": ""
+        "label": "contribute"
     },
     {
         "repo": "SovereignCloudStack/docs",
