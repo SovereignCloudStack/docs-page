@@ -23,7 +23,7 @@ jobs:
     needs: provide_repos_json
     runs-on: ubuntu-latest
     strategy:
-      # max-parallel: 1
+      max-parallel: 1
       matrix: 
         repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
