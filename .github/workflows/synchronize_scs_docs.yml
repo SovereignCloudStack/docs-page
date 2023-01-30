@@ -51,10 +51,6 @@ jobs:
       - name: copy docs content from A to B
         run: |
           cp -r $(pwd)/repo_to_be_edited/${{matrix.repos.source}} $(pwd)/${{matrix.repos.target}}/${{matrix.repos.label}}
-
-      - name: debug
-        run: |
-          ls -R community
           
       - name: remove repo A
         run: |
@@ -66,7 +62,6 @@ jobs:
           author_name: 'bot@scs'
           committer_name: Action Bot
           commit: --signoff
-          message: "distill"
+          message: "distill ${{matrix.repos.repo}}"
           push: true
           pull: --rebase --autostash
-          add: "docs"
