@@ -50,7 +50,7 @@ jobs:
 
       - name: copy docs content from A to B
         run: |
-          cp -r $(pwd)/repo_to_be_edited/${{matrix.repos.source}} $(pwd)/${{matrix.repos.target}}/${{matrix.repos.label}}
+          cp -r $(pwd)/repo_to_be_edited/${{matrix.repos.source}}/*.md $(pwd)/${{matrix.repos.target}}/${{matrix.repos.label}}
           
       - name: remove repo A
         run: |

@@ -7,7 +7,7 @@
     },
     {
         "repo": "SovereignCloudStack/release-notes",
-        "source": "",
+        "source": "/",
         "target": "docs",
         "label": "release-notes"
     },
