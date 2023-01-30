@@ -3,17 +3,17 @@
         "repo": "SovereignCloudStack/docs",
         "source": "operations",
         "target": "docs",
-        "label": "operations"
+        "label": ""
     },
     {
         "repo": "SovereignCloudStack/release-notes",
-        "source": "/",
+        "source": "*.md",
         "target": "docs",
         "label": "release-notes"
     },
     {
         "repo": "SovereignCloudStack/standards",
-        "source": "Standards",
+        "source": "Standards/*.md",
         "target": "docs",
         "label": "standards"
     },
@@ -21,6 +21,6 @@
         "repo": "SovereignCloudStack/docs",
         "source": "community",
         "target": "community",
-        "label": "community"
+        "label": ""
     }
 ]
