@@ -3,6 +3,10 @@ name: Synchronize SCS Docs
 
 on:
   workflow_call:
+    secrets:
+      PAT:
+        required: true
+  workflow_dispatch:
 
 jobs:
   provide_repos_json:
@@ -34,6 +38,8 @@ jobs:
     steps: 
       - name: checkout the docusaurus repo (B)
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
   
       - name: clone repo A which is about to be synchronized
         uses: sudosubin/git-clone-action@v1.0.1
