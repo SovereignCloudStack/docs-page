@@ -36,10 +36,9 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - name: remove all previous docs for clean install
+      - name: remove previous docs for clean install
         run: |
-          rm -rf $(pwd)/docs 
-          rm -rf $(pwd)/community 
+          rm -rf $(pwd)/${{matrix.repos.target}}/${{matrix.repos.label}} 
   
       - name: clone repo A which is about to be synchronized
         uses: sudosubin/git-clone-action@v1.0.1
