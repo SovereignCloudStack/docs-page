@@ -14,6 +14,17 @@ const sidebarsDocs = {
         'release-notes/Release4',
         'release-notes/ReleaseX'
       ]
+    },
+    {
+      type: 'category',
+      label: 'Openstack Image Manager',
+      items: [
+        'openstack-image-manager/overview',
+        'openstack-image-manager/requirements',
+        'openstack-image-manager/quickstart',
+        'openstack-image-manager/configuration',
+        'openstack-image-manager/contribute'
+      ]
     }
     /* No documents available yet in https://github.com/SovereignCloudStack/docs/tree/main/operations
     {
@@ -27,17 +38,6 @@ const sidebarsDocs = {
       ]
     },
     */
-    // {
-    //   type: 'category',
-    //   label: 'Openstack Image Manager',
-    //   items: [
-    //     'openstack-image-manager/configuration',
-    //     'openstack-image-manager/contribute',
-    //     'openstack-image-manager/overview',
-    //     'openstack-image-manager/quickstart',
-    //     'openstack-image-manager/requirements'
-    //   ]
-    // }
   ]
 }
 
