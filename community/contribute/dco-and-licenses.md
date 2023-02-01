@@ -1,10 +1,10 @@
-# DCO and Licenses
+# Developer Certificate of Origin + Licenses
 
 The Developer Certificate of Origin (DCO) is a lightweight way for contributors
 to certify that they wrote or otherwise have the right to submit the code they
 are contributing to the Sovereign Cloud Stack.
 
-```text
+```bash
 By making a contribution to this project, I certify that:
 
 (a) The contribution was created in whole or in part by me and I
@@ -41,7 +41,7 @@ Own documentation content is licensed under [Creative Commons BY-SA 4.0](https:/
 Contributors sign-off that they adhere to these requirements by adding a `Signed-off-by`
 line to commit messages.
 
-```text
+```bash
 My fancy commit message
 
 Signed-off-by: Christian Berendt <berendt@betacloud-solutions.de>
@@ -49,13 +49,13 @@ Signed-off-by: Christian Berendt <berendt@betacloud-solutions.de>
 
 Git has a `-s` command line option to append this automatically to your commit message:
 
-```terminal
+```bash
 git commit -s -m 'My fancy commit message'
 ```
 
 The status of a pull request is set to failed if commits do not contain a valid `Signed-off-by` line.
 
-![Failed DCO in GitHub](/../static/img/github-failed-dco.png)
+![Failed DCO in GitHub](github-failed-dco.png)
 
 Considerations behind the choice of AGPLv3, CC-BY-SA and the usage of the DCO can be found [here](license-considerations.md).
 

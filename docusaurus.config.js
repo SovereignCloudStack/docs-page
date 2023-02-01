@@ -33,7 +33,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebarsDocs.js'),
           editUrl: 'https://github.com/SovereignCloudStack/docs-page/tree/main/'
         },
         blog: {
@@ -131,7 +131,21 @@ const config = {
             darkTheme: darkCodeTheme,
             additionalLanguages: ['powershell', 'ruby']
           }
-        })
+        }),
+
+  themes: [
+    [
+      // @ts-ignore
+      '@easyops-cn/docusaurus-search-local',
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      // @ts-ignore
+      ({
+        hashed: true,
+        docsDir: ['docs', 'community'],
+        docsRouteBasePath: ['/docs', 'community']
+      })
+    ]
+  ]
 }
 
 module.exports = config

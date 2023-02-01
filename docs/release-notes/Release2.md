@@ -1,5 +1,4 @@
 # Release Notes for SCS Release 2
-
 (Release Date: 2022-03-23)
 
 ## Scope
@@ -11,7 +10,7 @@ of optional services.
 
 ## Component Versions and User-visible improvements (highlights)
 
-* We support the latest [Kubernetes 1.22](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md) and
+* We support the latest [Kubernetes 1.22](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md) and 
   [1.23](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md) releases.
 * The Kubernetes Cluster API is now available in a stable v1beta1
   [release 1.0.x](https://github.com/kubernetes-sigs/cluster-api/releases)
@@ -27,7 +26,7 @@ of optional services.
   [k8s capi provider release notes](https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/master/Release-Notes-R2.md)
   for more details.
 * [OpenStack Xena release](https://releases.openstack.org/xena/highlights.html)
-  * We have also enabled SPICE support in addition to noVNC to
+  - We have also enabled SPICE support in addition to noVNC to
     access the graphical console of VMs.
 
 * The base infrastructure is provided by
@@ -49,9 +48,9 @@ of optional services.
   nodes to roll out updates.
 
 * Added dashboards for the operators:
-  * Homer
-  * Flower
-  * Grafana dashboards
+  - Homer
+  - Flower
+  - Grafana dashboards
 
 * Work is underway to supersede [openstack-health-monitor](https://github.com/SovereignCloudStack/openstack-health-monitor)
   with a solution that is using tempest and rally. The health-monitor
@@ -60,16 +59,16 @@ of optional services.
   test clouds, especially failed metadata services.
 
 * User federation has been prepared to be ready for Gaia-X federation integration
-  * Keystone can consume users from Keycloak via OpenID-Connect
-  * Keycloak uses the highly-available Galera database cluster now
-  * mod_oauth2 support for Keystone
+  - Keystone can consume users from Keycloak via OpenID-Connect
+  - Keycloak uses the highly-available Galera database cluster now
+  - mod_oauth2 support for Keystone
 
 * Vast improvements in the SCS Deployment automation
-  * Full automation of bare metal deployment with Bifrost and Ironic
-  * Using NetBox as central source of truth for the complete setup
+  - Full automation of bare metal deployment with Bifrost and Ironic
+  - Using NetBox as central source of truth for the complete setup
 
 * New services available (opt-in)
-  * ClamAV, dnsdist, cgit, FRRouting, Nexus, Tang
+  - ClamAV, dnsdist, cgit, FRRouting, Nexus, Tang
 
 * Traefik centrally routes the connections to Nexus, NetBox, phpMyAdmin, Homer, Flower, ARA, cgit
 
@@ -81,7 +80,6 @@ for debugging purposes.
 The configuration of the testbed was minimized and the deployment was made more production-oriented.
 
 Further noteworthy improvements to testbed:
-
 * TLS is implemented throughout the services also in testbed
 * Virtual BMC in testbed
 * Public DNS for testbed (`testbed.osism.xyz`)
@@ -96,6 +94,7 @@ An overview over the used software versions is available from the
 [OSISM release](https://github.com/osism/release) repository as input
 for a complete SBOM. This allows to e.g. investigate the contents of the
 used (v3.0.0) images.
+
 
 ## Upgrade/Migration notes
 
@@ -128,7 +127,7 @@ used for the deployment of HAProxy.
 
 ## Deprecations
 
-Deprecations happen according to our [deprecation policy](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Release-Policies.md#deprecation).
+Deprecations happen according to our [deprecation policy](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Release-Policies.md#deprecation).
 
 * Cockpit is deprecated in favor of Boundary by HashiCorp or Teleport
 * ceph-ansible is deprecated in preparation for cephadm
@@ -158,7 +157,7 @@ docker-compose is then no longer available and docker compose must be used inste
 ## Standards Conformance
 
 The clusters created with our cluster-API cluster management solution pass
-the [CNCF conformance tests](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Image-Properties-Spec.md)
+the [CNCF conformance tests](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Image-Properties-Spec.md)
 as reported by [sonobuoy](https://sonobuoy.io/).
 
 The [OpenStack](https://openstack.org/) layer passes the
@@ -177,15 +176,15 @@ of Gaia-X self-descriptions and are closely working with the
 to jointly deliver a standard toolbox for Gaia-X compliant
 infrastructure and service offerings.
 
-The SCS standards for [flavor naming](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/flavor-naming.md) and
-[image metadata](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Image-Properties-Spec.md)
+The SCS standards for [flavor naming](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/flavor-naming.md) and
+[image metadata](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Image-Properties-Spec.md)
 are largely unchanged since R1. We have however
 made progress in our reference implementation fully implementing
 them without any further tweaks.
 
 ## Release Tagging
 
-See [Release Numbering scheme](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
 We have added the tag `v3.0.0` to the relevant repositories to designate the `SCS_RELEASE_R2`.
 
 Note that we will release R3 (v4.0.0) in September 2022 and stop providing maintenance

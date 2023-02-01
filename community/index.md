@@ -3,8 +3,6 @@ sidebar_position: 1
 title: Overview
 ---
 
-import CommunityCalendar from "../src/components/CommunityCalendar";
-
 # Welcome to our SCS Community
 
 ## Contribute to Sovereign Cloud Stack

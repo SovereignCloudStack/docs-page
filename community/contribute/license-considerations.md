@@ -4,7 +4,7 @@ As Sovereign Cloud Stack ([SCS](https://scs.community/)), our mission is to prov
 (be it Cloud Service Providers or just internal IT departments) with a well working software
 stack, that avoids exposing them to legal risks or additional restrictions that limits the
 usefulness. Free software licenses have this intention but differ in how they achieve it and in
-what kind of protections they provide. In the first approximation, all [OSI](https://opensource.org/licenses)-approved
+what kind of protections they provide. In the first approximation, all [OSI](<https://opensource.org/licenses)-approved
 open source licenses can be considered as valid options. As a matter of fact,
 we do consider projects under such licenses as valid modules for SCS -- where we
 use such projects and adjust or extend them, we would provide our contributions

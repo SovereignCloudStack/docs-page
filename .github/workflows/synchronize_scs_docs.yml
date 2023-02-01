@@ -3,6 +3,10 @@ name: Synchronize SCS Docs
 
 on:
   workflow_call:
+    secrets:
+      PAT:
+        required: true
+  workflow_dispatch:
 
 jobs:
   provide_repos_json:
@@ -12,27 +16,41 @@ jobs:
     steps:
       - name: Checkout the docusaurus repo (B)
         uses: actions/checkout@v3
-
+          
       - name: Set Matrix
         id: set-matrix
         run: |
-          REPOS=$(echo $(cat ././docs.json) | sed 's/ //g' )
+          REPOS=$(echo $(cat ././docs.package.json) | sed 's/ //g' )
           echo "::set-output name=matrix::$REPOS"
   
   sync_repos:
     needs: provide_repos_json
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1
       matrix: 
         repos: ${{ fromJson(needs.provide_repos_json.outputs.matrix) }}
     steps: 
       - name: checkout the docusaurus repo (B)
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: remove previous docs for clean install
+        if: ${{matrix.repos.label != null }}
+        run: |
+          rm -rf $(pwd)/${{matrix.repos.target}}/${{matrix.repos.label}} 
+
+      - name: remove previous docs for clean install
+        if: ${{matrix.repos.label == null }}
+        run: |
+          rm -rf $(pwd)/${{matrix.repos.target}}/${{matrix.repos.source}} 
+          rm -rf $(pwd)/${{matrix.repos.source}} 
   
       - name: clone repo A which is about to be synchronized
         uses: sudosubin/git-clone-action@v1.0.1
         with:
-          repository: ${{matrix.repos.org}}/${{matrix.repos.name}}
+          repository: ${{matrix.repos.repo}}
           path: 'repo_to_be_edited'
 
       - name: remove git folders from A
@@ -45,11 +63,11 @@ jobs:
 
       - name: create docusaurus subdirectory
         run: |
-          mkdir $(pwd)/docs/${{matrix.repos.name}} || true
+          mkdir $(pwd)/${{matrix.repos.target}}/${{matrix.repos.label}} || true
 
       - name: copy docs content from A to B
         run: |
-          cp -r $(pwd)/repo_to_be_edited/${{matrix.repos.directory}}/*.md $(pwd)/docs/${{matrix.repos.name}}
+          cp -r $(pwd)/repo_to_be_edited/${{matrix.repos.source}} $(pwd)/${{matrix.repos.target}}/${{matrix.repos.label}}
           
       - name: remove repo A
         run: |
@@ -61,7 +79,6 @@ jobs:
           author_name: 'bot@scs'
           committer_name: Action Bot
           commit: --signoff
-          message: "distill"
+          message: "distill ${{matrix.repos.repo}}"
           push: true
           pull: --rebase --autostash
-          add: "docs"
