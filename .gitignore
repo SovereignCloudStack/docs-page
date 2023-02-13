@@ -1,3 +1,9 @@
+# Content Dependencies from docs.package.json
+/community/contribute
+/docs/openstack-image-manager
+/docs/operations
+/docs/release-notes
+
 # Dependencies
 /node_modules
 
