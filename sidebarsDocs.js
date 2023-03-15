@@ -20,6 +20,32 @@ const sidebarsDocs = {
     },
     {
       type: 'category',
+      label: 'OSISM Testbed',
+      link: {
+        type: 'generated-index'
+      },
+      items: [
+        'testbed/overview',
+        'testbed/requirements',
+        'testbed/preparations',
+        'testbed/quickstart',
+        'testbed/getting_started',
+        'testbed/authentication',
+        'testbed/configuration',
+        'testbed/networking',
+        'testbed/usage',
+        'testbed/important_notes',
+        'testbed/contribute',
+        'testbed/license',
+        {
+          type: 'category',
+          label: 'Cloud in a Box',
+          items: ['testbed/cloud-in-a-box/quickstart']
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: 'Release Notes',
       link: {
         type: 'generated-index'

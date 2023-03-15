@@ -22,5 +22,17 @@
         "source": "doc/*.md",
         "target": "docs",
         "label": "openstack-image-manager"
+    },
+    {
+        "repo": "osism/testbed",
+        "source": "doc",
+        "target": "docs",
+        "label": "testbed"
+    },
+    {
+        "repo": "osism/cloud-in-a-box",
+        "source": "doc",
+        "target": "docs",
+        "label": "testbed/cloud-in-a-box"
     }
 ]
