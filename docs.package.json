@@ -34,5 +34,11 @@
         "source": "doc",
         "target": "docs",
         "label": "testbed/cloud-in-a-box"
+    },
+    {
+        "repo": "SovereignCloudStack/k8s-cluster-api-provider",
+        "source": "doc",
+        "target": "docs",
+        "label": "k8s-cluster-api-provider"
     }
 ]
