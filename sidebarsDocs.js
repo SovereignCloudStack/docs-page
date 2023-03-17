@@ -37,20 +37,6 @@ const sidebarsDocs = {
     },
     {
       type: 'category',
-      label: 'Openstack Image Manager',
-      link: {
-        type: 'generated-index'
-      },
-      items: [
-        'openstack-image-manager/overview',
-        'openstack-image-manager/requirements',
-        'openstack-image-manager/quickstart',
-        'openstack-image-manager/configuration',
-        'openstack-image-manager/contribute'
-      ]
-    },
-    {
-      type: 'category',
       label: 'OSISM Testbed',
       link: {
         type: 'generated-index'
@@ -73,6 +59,20 @@ const sidebarsDocs = {
           label: 'Cloud in a Box',
           items: ['testbed/cloud-in-a-box/doc/quickstart']
         }
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Openstack Image Manager',
+      link: {
+        type: 'generated-index'
+      },
+      items: [
+        'openstack-image-manager/overview',
+        'openstack-image-manager/requirements',
+        'openstack-image-manager/quickstart',
+        'openstack-image-manager/configuration',
+        'openstack-image-manager/contribute'
       ]
     },
     {
