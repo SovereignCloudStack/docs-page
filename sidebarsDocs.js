@@ -77,7 +77,7 @@ const sidebarsDocs = {
     },
     {
       type: 'category',
-      label: 'SCS Status Page',
+      label: 'Status Page',
       link: {
         type: 'generated-index'
       },
