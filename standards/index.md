@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Sovereign Cloud Stack – Standards and Certification
 
 SCS unifies the best of cloud computing in a certified standard. With a decentralized and federated cloud stack, SCS puts users in control of their data and fosters trust in clouds, backed by a global open-source community.
@@ -15,10 +11,11 @@ This is a list of clouds that we test on a nightly basis against our `scs-compat
 | [gx-scs](https://github.com/SovereignCloudStack/docs/blob/main/community/cloud-resources/plusserver-gx-scs.md) | Dev environment provided for SCS & GAIA-X context | PlusServer GmbH | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-gx-scs-v1.yml?label=v1%20Compliance) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-gx-scs-v2.yml?label=v2%20Compliance) |
 | [pluscloud open](https://www.plusserver.com/en/products/pluscloud-open) | Public cloud for customers | PlusServer GmbH | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-pco-prod1-v1.yml?label=v1%20Compliance) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-pco-prod2-v1.yml?label=v1%20Compliance) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-pco-prod1-v2.yml?label=v2%20Compliance) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-pco-prod2-v2.yml?label=v2%20Compliance) |
 | [Wavestack](https://www.noris.de/wavestack-cloud/) | Public cloud for customers | noris network AG/Wavecon GmbH | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-wavestack-v1.yml?label=v1%20Compliance) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-wavestack-v2.yml?label=v2%20Compliance) |
+| [REGIO.cloud](https://regio.digital) | Public cloud for customers | OSISM GmbH | | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/SovereignCloudStack/standards/check-regio-a-v2.yml?label=v2%20Compliance) |
 
 ## SCS standards overview
 
-Standards are organized as certification levels according to [SCS-0003-v1](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0003-v1-sovereign-cloud-standards-yaml.md). We currently maintain one certification level `scs-compatible` that is described here: [Tests/scs-compatible.yaml](https://github.com/SovereignCloudStack/standards/blob/main/Tests/scs-compatible.yaml).
+Standards are organized as certification levels according to [SCS-0003-v1](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0003-v1-sovereign-cloud-standards-yaml.md). We currently maintain one certification level `scs-compatible` that is described here: [Tests/scs-compatible.yaml](Tests/scs-compatible.yaml).
 
 More certification levels will follow as the project progresses.
 
