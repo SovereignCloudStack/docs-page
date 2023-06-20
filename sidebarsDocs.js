@@ -8,7 +8,8 @@ const sidebarsDocs = {
       type: 'category',
       label: 'K8s Cluster API Provider',
       link: {
-        type: 'generated-index'
+        type: 'doc', id: 'k8s-cluster-api-provider/index'
+
       },
       items: [
         'k8s-cluster-api-provider/doc/overview',
@@ -39,7 +40,7 @@ const sidebarsDocs = {
       type: 'category',
       label: 'OSISM Testbed',
       link: {
-        type: 'generated-index'
+        type: 'doc', id: 'testbed/index'
       },
       items: [
         'testbed/doc/overview',
@@ -65,7 +66,7 @@ const sidebarsDocs = {
       type: 'category',
       label: 'Openstack Image Manager',
       link: {
-        type: 'generated-index'
+        type: 'doc', id: 'openstack-image-manager/index'
       },
       items: [
         'openstack-image-manager/overview',
@@ -79,7 +80,7 @@ const sidebarsDocs = {
       type: 'category',
       label: 'Status Page',
       link: {
-        type: 'generated-index'
+        type: 'doc', id: 'status-page-openapi/index'
       },
       items: [
         'status-page-openapi/docs/overview',
@@ -91,7 +92,7 @@ const sidebarsDocs = {
       type: 'category',
       label: 'Release Notes',
       link: {
-        type: 'generated-index'
+        type: 'doc', id: 'release-notes/index'
       },
       items: [
         'release-notes/Release0',
