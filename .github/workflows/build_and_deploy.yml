@@ -1,6 +1,6 @@
 name: Build and Deploy to Github Pages
 
-"on":
+on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
