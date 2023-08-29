@@ -29,7 +29,10 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: { sidebarPath: require.resolve('./sidebarsDocs.js') },
+        docs: {
+          sidebarPath: require.resolve('./sidebarsDocs.js'),
+          editUrl: 'https://github.com/SovereignCloudStack/docs-page/tree/main/'
+        },
         blog: {
           showReadingTime: true,
           editUrl: 'https://github.com/SovereignCloudStack/docs-page/tree/main/'
@@ -41,6 +44,30 @@ const config = {
     ]
   ],
   plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        fromExtensions: ['html', 'htm'], // /myPage.html -> /myPage
+        toExtensions: ['exe', 'zip'] // /myAsset -> /myAsset.zip (if latter exists)
+        // redirects: [
+        //   // /docs/oldDoc -> /docs/newDoc
+        //   {
+        //     to: '/docs/newDoc',
+        //     from: '/docs/oldDoc'
+        //   }
+        // ],
+        // createRedirects (existingPath) {
+        //   if (existingPath.includes('/community')) {
+        //     // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
+        //     return [
+        //       existingPath.replace('/community', '/docs/team'),
+        //       existingPath.replace('/community', '/docs/support')
+        //     ]
+        //   }
+        //   return undefined // Return a falsy value: no redirect created
+        // }
+      }
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -79,6 +106,7 @@ const config = {
               { to: '/docs', label: 'Docs', position: 'left' },
               { to: '/standards', label: 'Standards', position: 'left' },
               { to: '/community', label: 'Community', position: 'left' },
+              { to: '/docs/faq', label: 'FAQ', position: 'left' },
               {
                 href: 'https://github.com/SovereignCloudStack/docs-page',
                 label: 'GitHub',
