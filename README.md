@@ -1,5 +1,12 @@
 # SCS Docs Page Readme
 
+> :warning: This Repository has been moved
+> 
+> The Source Code for the Docs Page with all Actions and Pipelines has been moved and merged with the content files into this repository:
+> https://github.com/SovereignCloudStack/docs
+>
+> This https://github.com/SovereignCloudStack/docs-page Repository will be archived.
+
 ## Licenses
 
 The content of this repository is published under multiple licenses.
